@@ -37,7 +37,7 @@ function ToDoForm({ addTaskHandle }: ToDoFormProps) {
         value={inputs.title}
         onChange={handleChange}
       />
-      <label htmlFor="description">Description</label>
+      <label htmlFor="description">Description:</label>
       <input
         type="text"
         name="description"
