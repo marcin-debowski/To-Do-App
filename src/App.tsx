@@ -1,4 +1,5 @@
 import './App.css'
+import ToDoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import { useState } from 'react';
 type Task = {
@@ -28,13 +29,17 @@ function App() {
     )
   );
 };
+const onDeleteTask = (id: number) => {
+  setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
+};
   return (
     <>
-      <div>
+      <div className='contener'>
         <h1>To-Do App</h1>
+          <ToDoForm/>
           {/* to do */}
-            <TodoList tasks={tasks} onToggle={toggleTaskCompleted}/>
-          {/* done */}
+            <TodoList tasks={tasks} onToggle={toggleTaskCompleted} onDelete={onDeleteTask}/>
+          
         <div>
 
         </div>

@@ -1,10 +1,12 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
+.contener{
+  
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,21 +20,6 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 2em;
 }
@@ -40,11 +27,41 @@
 .read-the-docs {
   color: #888;
 }
-.noComp{
-  
+.noComp, .comp{
+  display: grid;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  margin: 5px;
 }
-.comp{
+.noComp{
+
+}
+.comp p,.comp h3{
   text-decoration: line-through;
   color: chartreuse;
   text-decoration-thickness: 10%;
+
+}
+.redyButton{
+  grid-column: 10 / 11;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.left{
+ 
+grid-column: 1 / 10;
+}
+.toDo h3{
+  grid-column: 1 / 12;
+}
+.toDo{
+  margin: 0 auto;
+  width: 80%;
+}
+.delButton{
+  background-color: #d01111;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  grid-column: 11 / 12;
 }
